@@ -1,4 +1,4 @@
-let humanScore = 0;
+ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice()
@@ -28,32 +28,54 @@ let computerChoice;
 
  console.log(humanChoice);
 
- if(humanChoice == computerChoice)
+
+function playRound(humanChoice,computerChoice)
+{
+     if(humanChoice == computerChoice)
  {
     console.log("draw");
  }
 else if(humanChoice == 'rock' && computerChoice == 'paper')
 {
-    console.log("You lose!");
+    computerScore++;
 }
 else if(humanChoice == "paper" && computerChoice == "rock")
 {
-    console.log("You Win!");
+    humanScore++;
 }
 else if(humanChoice == "paper" && computerChoice == "scissors")
 {
-    console.log("You lose!");
+    computerScore++;
 }
 else if(humanChoice == "scissors" && computerChoice == "paper")
 {
-    console.write("You win!");
+    humanScore++;
 }
 else if(humanChoice == "scissors" && computerChoice == "rock")
 {
-    console.log("You lose!");
+    computerScore++;
 }
 else if(humanChoice == "rock" && computerChoice == "scissors")
-{
-    console.log("You win!");
+{ 
+    humanScore++;
 } 
 
+}
+
+const computerSelection =computerChoice;
+const humanSelection = humanChoice;
+
+playRound(humanSelection,computerSelection);
+
+if(humanScore == computerScore)
+{
+    window.prompt(`It's a draw!`)
+}
+else if(humanScore > computerScore)
+{
+    window.prompt("You win!");
+}
+else if(humanScore < computerScore)
+{
+    window.prompt('You lose!');
+}
