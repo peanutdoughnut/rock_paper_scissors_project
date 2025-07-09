@@ -1,6 +1,9 @@
-function getComputerChoice(computerChoice)
+function getComputerChoice()
 {
-    let num = Math.random();
+    return Math.random();
+}
+
+let num = Math.random();
 
     if(num <= 0.3)
     {
@@ -14,6 +17,4 @@ function getComputerChoice(computerChoice)
     {
         computerChoice = 'scissors';
     }
-
-    console.log(`Computer : ${num}`);
-}
+ console.log(computerChoice);
