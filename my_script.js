@@ -1,9 +1,10 @@
-function getComputerChoice()
+/* function getComputerChoice()
 {
     return Math.random();
 }
 
 let num = Math.random();
+let computerChoice;
 
     if(num <= 0.3)
     {
@@ -17,4 +18,8 @@ let num = Math.random();
     {
         computerChoice = 'scissors';
     }
- console.log(computerChoice);
+ console.log(computerChoice); */
+
+ humanChoice = window.prompt("Select Rock ,Paper or Scissors");
+
+ console.log(humanChoice);
