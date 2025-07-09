@@ -1,4 +1,7 @@
- function getComputerChoice()
+let humanScore = 0;
+let computerScore = 0;
+
+function getComputerChoice()
 {
     return Math.random();
 }
@@ -20,7 +23,11 @@ let computerChoice;
     }
  console.log(computerChoice); 
 
+
  humanChoice = window.prompt("Select Rock ,Paper or Scissors");
+
+ console.log(humanChoice);
+
  if(humanChoice == computerChoice)
  {
     console.log("draw");
@@ -48,7 +55,5 @@ else if(humanChoice == "scissors" && computerChoice == "rock")
 else if(humanChoice == "rock" && computerChoice == "scissors")
 {
     console.log("You win!");
-}
+} 
 
-
- //console.log(humanChoice);
