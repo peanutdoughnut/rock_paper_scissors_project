@@ -17,19 +17,31 @@ function getComputerChoice()
 // play round function
 function playRound(humanSelection, computerSelection) {
     
-    //humanSelection = userChoice ;
+    //score counters
+    let humanScore = 0;
+    let computerScore = 0; 
 
     if (humanSelection === computerSelection) {
-        return "It's a tie!";
+        humanScore++;
+        computerScore++;
+        alert('it is a Tie');
     } else if (
         (humanSelection === 'rock' && computerSelection === 'scissors') ||
         (humanSelection === 'paper' && computerSelection === 'rock') ||
         (humanSelection === 'scissors' && computerSelection === 'paper')
     ) {
-        return "You win! " + humanSelection + " beats " + computerSelection;
+        humanScore++;
+        alert(`you win! ${humanSelection} beats ${computerSelection}`);
+      
     } else {
-        return "You lose! " + computerSelection + " beats " + humanSelection;
+        //
+        computerScore++;
+        alert(`You lose! ${computerSelection}   beats ${humanSelection} `);
     }
+
+
+
+       
 } 
 
 
@@ -45,8 +57,19 @@ console.log(`computer:${computerSelection}`);
  
 }
 
-//user choice function
+//display results
 
+/*const [compTotal, humanTotal] = playRound();
+
+if(compTotal == humanTotal){
+    alert("It's a tie!");
+}
+else if(compTotal > humanTotal){
+    alert("You lose! Computer wins!");
+}
+else if(compTotal < humanTotal){
+    alert("You win! Human wins!");
+}
 
 /*console.log(userChoice);
 alert(userChoice);*/
